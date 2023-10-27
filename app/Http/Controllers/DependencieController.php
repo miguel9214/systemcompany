@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dependencie;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class DependencieController extends Controller
 {
@@ -12,6 +13,9 @@ class DependencieController extends Controller
      */
     public function index()
     {
+        $dependencies = Dependencie::all();
+        return Inertia::render('Dependecies/Index',['dependencies' => $dependencies]);
+
         //
     }
 
@@ -20,7 +24,9 @@ class DependencieController extends Controller
      */
     public function create()
     {
-        //
+
+        return Inertia::render('Dependencies/Create');
+
     }
 
     /**
@@ -28,7 +34,12 @@ class DependencieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['name' => 'required|max:100']);
+        $dependencie = new Dependencie($request->input());
+        $dependencie->save();
+        return redirect('dependencies');
+
+
     }
 
     /**
@@ -44,7 +55,7 @@ class DependencieController extends Controller
      */
     public function edit(Dependencie $dependencie)
     {
-        //
+        return Inertia::render('Dependencies/Edit',['dependencie' => $dependencie]);
     }
 
     /**
@@ -52,7 +63,11 @@ class DependencieController extends Controller
      */
     public function update(Request $request, Dependencie $dependencie)
     {
-        //
+        $request->validate(['name' => 'required|max:100']);
+        $dependencie->update($request->all());
+        return redirect('dependencies');
+
+
     }
 
     /**
@@ -60,6 +75,8 @@ class DependencieController extends Controller
      */
     public function destroy(Dependencie $dependencie)
     {
-        //
+        $dependencie->delete();
+        return redirect('departments');
+
     }
 }
