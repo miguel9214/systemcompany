@@ -26,9 +26,7 @@ return new class extends Migration
             $table->string('anydesk', 100);
             $table->string('printer', 100);
             $table->string('scanner', 100);
-            $table->foreignId('place_id')
-            ->constrained('places')
-            ->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('dependencie_id')->constrained('dependencies')->onUpdate('cascade')->onDelete('restrict');
             $table->timestamps();
         });
     }

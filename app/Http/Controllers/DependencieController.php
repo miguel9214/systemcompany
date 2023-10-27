@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Place;
+use App\Models\Dependencie;
 use Illuminate\Http\Request;
 
-class PlaceController extends Controller
+class DependencieController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class PlaceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Place $place)
+    public function show(Dependencie $dependencie)
     {
         //
     }
@@ -42,7 +42,7 @@ class PlaceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Place $place)
+    public function edit(Dependencie $dependencie)
     {
         //
     }
@@ -50,7 +50,7 @@ class PlaceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Place $place)
+    public function update(Request $request, Dependencie $dependencie)
     {
         //
     }
@@ -58,7 +58,7 @@ class PlaceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Place $place)
+    public function destroy(Dependencie $dependencie)
     {
         //
     }

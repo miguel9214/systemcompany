@@ -22,6 +22,6 @@ class Computer extends Model
         'anydesk',
         'printer',
         'scanner',
-        'place_id'
+        'dependencie_id'
     ];
 }
