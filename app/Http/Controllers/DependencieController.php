@@ -76,7 +76,7 @@ class DependencieController extends Controller
     public function destroy(Dependencie $dependencie)
     {
         $dependencie->delete();
-        return redirect('departments');
+        return redirect('dependencies');
 
     }
 }
