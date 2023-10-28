@@ -14,7 +14,7 @@ class DependencieController extends Controller
     public function index()
     {
         $dependencies = Dependencie::all();
-        return Inertia::render('Dependecies/Index',['dependencies' => $dependencies]);
+        return Inertia::render('Dependencies/Index',['dependencies' => $dependencies]);
 
         //
     }
