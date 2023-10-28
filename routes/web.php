@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('dependencies', DependencieController::class);
     Route::resource('computers', ComputerController::class);
-    Route::get('graphic',[ComputerController::class,'EmployeeByDepartment'])->name('graphic');
+    Route::get('graphic',[ComputerController::class,'ComputerByDependencie'])->name('graphic');
     Route::get('reports',[ComputerController::class,'reports'])->name('reports');
 
 
