@@ -53,6 +53,14 @@
                 <i class="fa-solid fa-computer"></i>
                 Equipos
             </nav-link>
+            <nav-link :href="route('graphic')" :active="route().current('graphic')">
+                <i class="fa-solid fa-computer"></i>
+                Graficas
+            </nav-link>
+            <nav-link :href="route('reports')" :active="route().current('reports')">
+                <i class="fa-solid fa-computer"></i>
+                Reportes
+            </nav-link>
 
 
             <nav-link :href="route('about')" :active="route().current('about')">
