@@ -144,7 +144,7 @@ const deleteComputer = (id, name) => {
             </h2>
         </template>
 
-        <div class="py-12">
+        <div class="py-12 p-4">
             <div class="bg-white grid v-screen place-items-center">
                 <div class="mt-3 mb-3 flex">
                     <PrimaryButton @click="openModal(1)">
@@ -153,7 +153,7 @@ const deleteComputer = (id, name) => {
                 </div>
             </div>
             <div
-                class="bg-white grid v-screen place-items-center overflow-x-auto py-3"
+                class="bg-white grid v-screen place-items-center overflow-x-auto py-3 p-8"
             >
                 <table class="table-auto border border-gray-400">
                     <thead>
@@ -232,7 +232,17 @@ const deleteComputer = (id, name) => {
                                             com.name,
                                             com.so,
                                             com.ofimatica,
-                                            com.dependecie_id,
+                                            com.cpu,
+                                            com.storage,
+                                            com.ram,
+                                            com.ip,
+                                            com.mac,
+                                            com.serial,
+                                            com.fixed_asset,
+                                            com.anydesk,
+                                            com.printer,
+                                            com.scanner,
+                                            com.dependencie_id,
                                             com.id
                                         )
                                     "
@@ -242,7 +252,7 @@ const deleteComputer = (id, name) => {
                             </td>
                             <td class="border border-gray-400 px-2 py-2">
                                 <DangerButton
-                                    @click="deleteEmployee(com.id, com.name)"
+                                    @click="deleteComputer(com.id, com.name)"
                                 >
                                     <i class="fa-solid fa-trash"></i>
                                 </DangerButton>
@@ -278,13 +288,13 @@ const deleteComputer = (id, name) => {
                 ></InputError>
             </div>
             <div class="p-3">
-                <InputLabel for="email" value="Email:"></InputLabel>
+                <InputLabel for="so" value="Sistema Operativo:"></InputLabel>
                 <TextInput
-                    id="email"
-                    v-model="form.email"
+                    id="so"
+                    v-model="form.so"
                     type="text"
                     class="mt-1 block w-3/4"
-                    placeholder="Email"
+                    placeholder="Sistema Operativo"
                 ></TextInput>
                 <InputError
                     :message="form.errors.email"
@@ -292,13 +302,27 @@ const deleteComputer = (id, name) => {
                 ></InputError>
             </div>
             <div class="p-3">
-                <InputLabel for="phone" value="Phone:"></InputLabel>
+                <InputLabel for="ofimatica" value="Ofimatica:"></InputLabel>
                 <TextInput
-                    id="phone"
-                    v-model="form.phone"
+                    id="ofimatica"
+                    v-model="form.ofimatica"
                     type="text"
                     class="mt-1 block w-3/4"
-                    placeholder="Phone"
+                    placeholder="Ofimatica"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.phone"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="cpu" value="Cpu:"></InputLabel>
+                <TextInput
+                    id="cpu"
+                    v-model="form.cpu"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Cpu"
                 ></TextInput>
                 <InputError
                     :message="form.errors.phone"

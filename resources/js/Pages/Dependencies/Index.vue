@@ -43,7 +43,7 @@ const deleteDependencie = (id,name) =>{
                     </Link>
                 </div>
             </div>
-            <div class="bg-white grid v-screen place-items-center">
+            <div class="bg-white grid v-screen place-items-center p-8">
                 <table class="table-auto border border-gray-400">
                     <thead>
                         <tr class="bg-gray-100">
