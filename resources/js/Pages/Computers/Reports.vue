@@ -30,10 +30,6 @@ const types = ref([{'id':'1','name':'Computers'},{'id':'2','name':'Dependencies'
 
 columns1.value= [{data:null,render:function(data,type,row,meta)
     {return (meta.row + 1)}},
-    {data:'name'},
-    {data:'email'},
-    {data:'phone'},
-    {data:'department'},
     {data: "name"},
     {data: "so"},
     {data: "ofimatica"},

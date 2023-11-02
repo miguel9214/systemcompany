@@ -131,7 +131,7 @@ class ComputerController extends Controller
     {
 
         $data = Computer::select(DB::raw('count(computers.id) as count, dependencies.name'))
-        ->join('dependencies','dependencies.id','=','computers.department_id')
+        ->join('dependencies','dependencies.id','=','computers.dependencie_id')
         ->groupBy('dependencies.name')->get();
         return Inertia::render('Computers/Graphic',['data' => $data]);
     }
