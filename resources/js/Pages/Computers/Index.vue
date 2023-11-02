@@ -144,7 +144,7 @@ const deleteComputer = (id, name) => {
             </h2>
         </template>
 
-        <div class="py-12">
+        <div class="py-12 p-4">
             <div class="bg-white grid v-screen place-items-center">
                 <div class="mt-3 mb-3 flex">
                     <PrimaryButton @click="openModal(1)">
@@ -153,7 +153,7 @@ const deleteComputer = (id, name) => {
                 </div>
             </div>
             <div
-                class="bg-white grid v-screen place-items-center overflow-x-auto py-3"
+                class="bg-white grid v-screen place-items-center overflow-x-auto py-3 p-8"
             >
                 <table class="table-auto border border-gray-400">
                     <thead>
@@ -232,7 +232,17 @@ const deleteComputer = (id, name) => {
                                             com.name,
                                             com.so,
                                             com.ofimatica,
-                                            com.dependecie_id,
+                                            com.cpu,
+                                            com.storage,
+                                            com.ram,
+                                            com.ip,
+                                            com.mac,
+                                            com.serial,
+                                            com.fixed_asset,
+                                            com.anydesk,
+                                            com.printer,
+                                            com.scanner,
+                                            com.dependencie_id,
                                             com.id
                                         )
                                     "
@@ -242,7 +252,7 @@ const deleteComputer = (id, name) => {
                             </td>
                             <td class="border border-gray-400 px-2 py-2">
                                 <DangerButton
-                                    @click="deleteEmployee(com.id, com.name)"
+                                    @click="deleteComputer(com.id, com.name)"
                                 >
                                     <i class="fa-solid fa-trash"></i>
                                 </DangerButton>
@@ -278,13 +288,13 @@ const deleteComputer = (id, name) => {
                 ></InputError>
             </div>
             <div class="p-3">
-                <InputLabel for="email" value="Email:"></InputLabel>
+                <InputLabel for="so" value="Sistema Operativo:"></InputLabel>
                 <TextInput
-                    id="email"
-                    v-model="form.email"
+                    id="so"
+                    v-model="form.so"
                     type="text"
                     class="mt-1 block w-3/4"
-                    placeholder="Email"
+                    placeholder="Sistema Operativo"
                 ></TextInput>
                 <InputError
                     :message="form.errors.email"
@@ -292,13 +302,13 @@ const deleteComputer = (id, name) => {
                 ></InputError>
             </div>
             <div class="p-3">
-                <InputLabel for="phone" value="Phone:"></InputLabel>
+                <InputLabel for="ofimatica" value="Ofimatica:"></InputLabel>
                 <TextInput
-                    id="phone"
-                    v-model="form.phone"
+                    id="ofimatica"
+                    v-model="form.ofimatica"
                     type="text"
                     class="mt-1 block w-3/4"
-                    placeholder="Phone"
+                    placeholder="Ofimatica"
                 ></TextInput>
                 <InputError
                     :message="form.errors.phone"
@@ -306,19 +316,159 @@ const deleteComputer = (id, name) => {
                 ></InputError>
             </div>
             <div class="p-3">
+                <InputLabel for="cpu" value="Cpu:"></InputLabel>
+                <TextInput
+                    id="cpu"
+                    v-model="form.cpu"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Cpu"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.cpu"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="storage" value="Almacenamiento:"></InputLabel>
+                <TextInput
+                    id="storage"
+                    v-model="form.storage"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Almacenamiento"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.storage"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="ram" value="Ram:"></InputLabel>
+                <TextInput
+                    id="ram"
+                    v-model="form.ram"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Ram"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.ram"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="ip" value="Ip:"></InputLabel>
+                <TextInput
+                    id="ip"
+                    v-model="form.ip"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Ip"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.ip"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="mac" value="Mac:"></InputLabel>
+                <TextInput
+                    id="mac"
+                    v-model="form.mac"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Mac"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.mac"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="serial" value="Serial:"></InputLabel>
+                <TextInput
+                    id="serial"
+                    v-model="form.serial"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Serial"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.serial"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="activo" value="Activo fijo:"></InputLabel>
+                <TextInput
+                    id="activo"
+                    v-model="form.fixed_asset"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Activo fijo"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.fixed_asset"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="anydesk" value="Anydesk"></InputLabel>
+                <TextInput
+                    id="anydesk"
+                    v-model="form.anydesk"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Anydesk"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.fixed_asset"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="impresora" value="Impresora"></InputLabel>
+                <TextInput
+                    id="impresora"
+                    v-model="form.printer"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Impresora"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.printer"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
+                <InputLabel for="escaner" value="Escaner"></InputLabel>
+                <TextInput
+                    id="escaner"
+                    v-model="form.scanner"
+                    type="text"
+                    class="mt-1 block w-3/4"
+                    placeholder="Escaner"
+                ></TextInput>
+                <InputError
+                    :message="form.errors.scanner"
+                    class="mt-2"
+                ></InputError>
+            </div>
+            <div class="p-3">
                 <InputLabel
-                    for="department_id"
-                    value="Department:"
+                    for="dependencie_id"
+                    value="Dependencia:"
                 ></InputLabel>
                 <SelectInput
-                    id="department_id"
-                    :options="departments"
-                    v-model="form.department_id"
+                    id="dependencie_id"
+                    :options="dependencies"
+                    v-model="form.dependencie_id"
                     type="text"
                     class="mt-1 block w-3/4"
                 ></SelectInput>
                 <InputError
-                    :message="form.errors.department_id"
+                    :message="form.errors.dependencie_id"
                     class="mt-2"
                 ></InputError>
             </div>
