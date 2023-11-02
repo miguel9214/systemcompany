@@ -6,12 +6,14 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head,useForm } from '@inertiajs/vue3';
 
-const props = defineProps({ dependencie:{type:Object}});
+const props = defineProps({dependencie:Object});
 
-console.log(props);
 const form = useForm({
     name:props.dependencie.name
 });
+
+console.log(props);
+
 </script>
 
 <template>
