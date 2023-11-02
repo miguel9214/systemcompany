@@ -54,11 +54,11 @@
                 Equipos
             </nav-link>
             <nav-link :href="route('graphic')" :active="route().current('graphic')">
-                <i class="fa-solid fa-computer"></i>
+                <i class="fa-solid fa-chart-pie"></i>
                 Graficas
             </nav-link>
             <nav-link :href="route('reports')" :active="route().current('reports')">
-                <i class="fa-solid fa-computer"></i>
+                <i class="fa-solid fa-table"></i>
                 Reportes
             </nav-link>
 
