@@ -56,7 +56,7 @@ const deleteDependencie = (id,name) =>{
                     <tbody>
                         <tr v-for="dep, i in dependencies" :key="dep.id">
                         <td class="border border-gray-400 px-4 py-4">{{ (i+1) }}</td>
-                        <td class="border border-gray-400 px-4 py-4">{{ dep.name }}</td>
+                        <td class="border border-gray-400 px-4 py-4">{{ dep.name }}{{ dep.id }}</td>
                         <td class="border border-gray-400 px-4 py-4">
                             <Link :href="route('dependencies.edit',dep.id)"
                             :class="'px-4 py-2 bg-yellow-400 text-white border rounded-md font-semibold text-xs'">

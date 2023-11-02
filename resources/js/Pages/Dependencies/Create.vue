@@ -24,8 +24,8 @@ const form = useForm({
                 <div class="p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <form @submit.prevent="form.post(route('dependencies.store'))"
                     class="mt-6 space-y-6 max-w-xl">
-                    <InputLabel for="name" value="Department"></InputLabel>
-                    <TextInput id="name" v-model="form.name" autofocus required
+                    <InputLabel for="name" value="Dependencia"></InputLabel>
+                    <TextInput id="name" v-model=form.name autofocus required
                     type="text"
                     class="mt-1 block w-full"></TextInput>
                     <InputError :message="form.errors.name" class="mt-2"></InputError>
