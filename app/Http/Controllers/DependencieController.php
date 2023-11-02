@@ -14,6 +14,7 @@ class DependencieController extends Controller
     public function index()
     {
         $dependencies = Dependencie::all();
+        
         return Inertia::render('Dependencies/Index',['dependencies' => $dependencies]);
 
         //
@@ -42,13 +43,6 @@ class DependencieController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Dependencie $dependencie)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
